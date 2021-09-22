@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+  
+  
+}
+
+body, #app {
+  margin: 0;
+  height: 100vh;
+  font-family:  Roboto, Helvetica, sans-serif;
+  
+}
+ ul {
+  list-style-type: none;
+  padding: 0;
+      margin: 0;
+ }
+
+ button{
+  background-color: transparent;
+  border: none;
+  // padding: 0;
+} 

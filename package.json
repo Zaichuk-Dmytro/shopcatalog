@@ -5,10 +5,15 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "add dist": "git add dist",
+    "commit dist": "git commit -m 'publish'",
+    "push dist": "git subtree push --prefix dist origin gh-pages"
   },
   "dependencies": {
+    "@mdi/font": "^5.9.55",
     "core-js": "^3.6.5",
+    "material-design-icons": "^3.0.1",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
     "vuex": "^3.4.0"
