@@ -1,3 +1,3 @@
 module.exports = {
-  publicPath: '/shopcatalog/'
+  publicPath: process.env.BASE_URL
 }
