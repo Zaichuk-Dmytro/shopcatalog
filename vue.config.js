@@ -3,6 +3,9 @@ module.exports = {
   pages: {
     index: {
       entry: 'src/main.js'
+    },
+    404: {
+      entry: 'src/main.js'
     }
   }
 }

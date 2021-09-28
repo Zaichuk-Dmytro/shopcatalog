@@ -145,8 +145,7 @@ export default {
     .product-page__content{
       max-width: 1500px;
       margin: 0 auto;
-      height: 100vh;
-
+      margin-bottom: 30px;
     }
   }  
 </style>

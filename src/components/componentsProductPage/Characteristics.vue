@@ -3,7 +3,7 @@
     :infoProduct="product"
   >
     <message-wrapper
-      text="Раздел в разработке"
+      text="Раздел Характеристики в разработке"
     />   
   </product-short-information>
 </template>

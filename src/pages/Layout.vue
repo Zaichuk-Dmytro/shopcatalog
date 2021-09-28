@@ -1,9 +1,11 @@
 <template>
   <div class="layout">
-    <div class="wrappermain">
+    <div class="wrapperlayout">
       <app-header/>
-      <div class="main">
-        <router-view/>
+      <div class="wrappermain" >
+        <div class="main">
+          <router-view/>
+        </div>
         <footer class="footer">
           <a 
             class="myGit-link"
@@ -46,21 +48,23 @@ export default {
     height: 100vh;
     overflow:hidden;
 
-    .wrappermain {
+    .wrapperlayout {
       height: 100vh;
       overflow: auto;
-
-      .main{
+      .wrappermain {
         height: calc(100vh - 72px);
         overflow: auto;
         position: relative;
+      }
+      .main{
+        min-height: calc(100vh - 172px);
       }
 
       .footer{
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 150px;
+        height: 100px;
         width: 100%;
         background-color: #00a046;
 
