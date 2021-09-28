@@ -1,3 +1,8 @@
 module.exports = {
-  publicPath: process.env.BASE_URL
+  publicPath: '/shopcatalog/',
+  pages: {
+    index: {
+      entry: 'src/main.js'
+    }
+  }
 }
