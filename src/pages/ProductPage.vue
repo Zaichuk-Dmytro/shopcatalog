@@ -1,8 +1,20 @@
 <template>
   <div class="product-page">
     <div class="page__header">
+      <div class="breadcrumbs">
+        <router-link 
+          :to="{ name: 'homepage'}"
+        >
+          <span class="mdi mdi-home-outline"></span>
+        </router-link>
+          <span class="mdi mdi-chevron-right"></span>
+        <router-link 
+          :to="{ name: 'catalog', params: {name: $route.params.name}}"
+        >
+          {{product.category}}
+        </router-link>
+      </div>
       <div class="name__product">
-       
         {{product.title}}
       </div>
     </div>
@@ -34,15 +46,11 @@
 </template>
 
 <script>
-import { modalMixin } from '../components/mixins'
 
 export default {
   name: 'product-page',
-  mixins: [
-    modalMixin
-  ],
   data: () => ({
-    productsAll: [],
+    product: {},
     component: 'product-information',
     tabs: [
       {title: 'Все о товаре', value: 'product-information'},
@@ -55,9 +63,6 @@ export default {
   computed: {
     type() {
       return this.$route.params.name
-    },
-    product() {
-      return this.productsAll.find(item => item.id == this.$route.params.id) || {}
     }
   },
   methods: {
@@ -66,28 +71,37 @@ export default {
     },
   },
   async created() {
-    this.productsAll = await this.fetchApi(this.type) 
-    if ( this.productsAll?.length && !this.product.id) {
+    this.product = await this.$store.dispatch('getItemById', {type: this.type, id: this.$route.params.id}) 
+    if ( !this.product) {
       this.$router.push({path: '/error'})
     }
-  },
-  
+    await this.$store.commit('addViewedProduct', this.product)
+  },  
 }
 </script>
 
 <style lang="scss" scoped>
   .product-page{
     margin: 0 auto;
-    // border: 1px solid;
-    // убрать 
+    
 
     .page__header{
       max-width: 1500px;
       margin: 0 auto;
-      height: 100px;
-
+      padding: 20px 0;
+      
       .name__product{
         font-size: 36px;
+      }
+
+      .breadcrumbs {
+        margin-bottom: 16px;
+
+        * {
+          font-size: 18px;
+          color: #3e77aa;
+        }
+        
       }
     }
 
@@ -131,8 +145,7 @@ export default {
     .product-page__content{
       max-width: 1500px;
       margin: 0 auto;
-      // border: 1px solid red;//убрать
-      height: 2000px;//убрать
+      height: 100vh;
 
     }
   }  

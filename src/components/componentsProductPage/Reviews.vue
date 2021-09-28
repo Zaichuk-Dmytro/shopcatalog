@@ -1,13 +1,11 @@
 <template>
-  <content-wrapper 
+  <product-short-information 
     :infoProduct="product"
   >
-   <div class="wrapper"> 
-      <div class="reviews">
-        Раздел в разработке
-      </div>  
-   </div>
-  </content-wrapper>
+   <message-wrapper
+      text="Раздел в разработке"
+    />
+  </product-short-information>
 </template>
 
 <script>

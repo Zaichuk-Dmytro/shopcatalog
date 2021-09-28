@@ -76,6 +76,10 @@ export default {
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
               
         .comparison__item-category{
           color: #3e77aa;

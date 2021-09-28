@@ -110,6 +110,7 @@ export default {
         this.cartItem.count--  
       }
       this.rangeValueForInput()
+      this.$store.commit('addCartToStorage')
     },
     rangeValueForInput() {
       let count = this.cartItem.count
@@ -131,9 +132,6 @@ export default {
   },
   mounted() {
     this.$root.$on('hideOptionMenu', this.hideOptionMenu)
-  },
-  created() {
-    // console.log(this.cartItem)
   }
 }
 </script>

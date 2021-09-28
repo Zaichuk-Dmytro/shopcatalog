@@ -25,7 +25,7 @@ export default [
       'Видеокарта': 'NVIDIA GeForce GTX 1650',
       'Объем памяти видеокарты': '4 ГБ',
     },
-    id_category: 'Laptops',
+    id_category: 'Notepad',
     category: 'Ноутбуки'
   },
   {
@@ -54,7 +54,7 @@ export default [
       'Видеокарта': 'NVIDIA GeForce MX330',
       'Объем памяти видеокарты': '2 ГБ',
     },
-    id_category: 'Laptops',
+    id_category: 'Notepad',
     category: 'Ноутбуки'
   },
   {
@@ -83,7 +83,7 @@ export default [
       'Видеокарта': 'NVIDIA GeForce MX330',
       'Объем памяти видеокарты': '2 ГБ',
     },
-    id_category: 'Laptops',
+    id_category: 'Notepad',
     category: 'Ноутбуки'
   },
   {
@@ -111,7 +111,7 @@ export default [
       'Видеокарта': 'NVIDIA GeForce GTX 1650 Ti',
       'Объем памяти видеокарты': '4 ГБ',
     },
-    id_category: 'Laptops',
+    id_category: 'Notepad',
     category: 'Ноутбуки'
   },
   {
@@ -140,7 +140,7 @@ export default [
       'Видеокарта': 'Интегрированная видеокарта',
       'Объем памяти видеокарты': '-',
     },
-    id_category: 'Laptops',
+    id_category: 'Notepad',
     category: 'Ноутбуки'
   },
   {
@@ -169,7 +169,7 @@ export default [
       'Видеокарта': 'Интегрированная видеокарта',
       'Объем памяти видеокарты': '-',
     },
-    id_category: 'Laptops',
+    id_category: 'Notepad',
     category: 'Ноутбуки'
   },
   {
@@ -198,7 +198,7 @@ export default [
       'Видеокарта': 'Интегрированная видеокарта',
       'Объем памяти видеокарты': '-',
     },
-    id_category: 'Laptops',
+    id_category: 'Notepad',
     category: 'Ноутбуки'
   },
   {
@@ -227,7 +227,7 @@ export default [
       'Видеокарта': 'NVIDIA GeForce RTX 3060 Max-Q',
       'Объем памяти видеокарты': '6 ГБ',
     },
-    id_category: 'Laptops',
+    id_category: 'Notepad',
     category: 'Ноутбуки'
   },
   {
@@ -257,7 +257,7 @@ export default [
       'Видеокарта': 'NVIDIA GeForce RTX 3060',
       'Объем памяти видеокарты': '6 ГБ',
     },
-    id_category: 'Laptops',
+    id_category: 'Notepad',
     category: 'Ноутбуки'
   },
   {
@@ -286,7 +286,7 @@ export default [
       'Видеокарта': 'Интегрированная видеокарта',
       'Объем памяти видеокарты': '-',
     },
-    id_category: 'Laptops',
+    id_category: 'Notepad',
     category: 'Ноутбуки'
   },
   {
@@ -315,7 +315,7 @@ export default [
       'Видеокарта': 'Интегрированная видеокарта',
       'Объем памяти видеокарты': '-',
     },
-    id_category: 'Laptops',
+    id_category: 'Notepad',
     category: 'Ноутбуки'
   },
   {
@@ -344,7 +344,7 @@ export default [
       'Видеокарта': 'Интегрированная видеокарта',
       'Объем памяти видеокарты': '-',
     },
-    id_category: 'Laptops',
+    id_category: 'Notepad',
     category: 'Ноутбуки'
   },
   {
@@ -373,7 +373,7 @@ export default [
       'Видеокарта': 'NVIDIA GeForce GTX 1650 Ti',
       'Объем памяти видеокарты': '4 ГБ',
     },
-    id_category: 'Laptops',
+    id_category: 'Notepad',
     category: 'Ноутбуки'
   },
 ]

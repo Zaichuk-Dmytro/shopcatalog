@@ -35,8 +35,7 @@ export default {
     .badge__element{
       display: flex;
       align-items: center;
-      
-justify-content: center;
+      justify-content: center;
       position: absolute;
       top: 0;
       right: 12px;

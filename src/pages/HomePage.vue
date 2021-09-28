@@ -16,9 +16,9 @@ export default {
 <style lang="scss" scoped>
   .homepage {
     display: flex;
-    max-width: 1500px;
-    height: 2000px;
-    border: 1px solid red;
+    max-width: 1500px;    
+    height: max-content;
+    min-height: calc(100vh - 172px);
     margin: 0 auto;
   }
 </style>

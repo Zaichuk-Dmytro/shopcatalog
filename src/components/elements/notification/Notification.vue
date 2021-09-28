@@ -60,7 +60,7 @@ export default {
       justify-content: space-between;
       background-color: #d0ecdb;
       border-radius: 4px;
-      opacity: 1;
+      // opacity: 1;
       width: 50%;
       height: 40px;
       padding: 0 12px;

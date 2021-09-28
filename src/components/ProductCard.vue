@@ -17,7 +17,7 @@
           class="product__img-link"
           :to="{
             name: 'productPage',
-            params: {name: $route.params.name , id: item.id}
+            params: {name: item.id_category , id: item.id}
           }"
         >
           <img 
@@ -32,7 +32,15 @@
         class="product__title"
         :title="item.title"
       >
-        {{item.title}}
+        <router-link
+        class="product__title-link"
+          :to="{
+            name: 'productPage',
+            params: {name: item.id_category , id: item.id}
+          }"
+        >
+          {{item.title}}
+        </router-link>
       </div>
       <div class="product__price">
         <div class="product__old_price" >
@@ -46,12 +54,9 @@
             {{formatPrice(item.price)}}
             <span class="sign-currency__price">₴</span>
           </div>
-          <icon-btn
-            @click="addCart"
-            :icon="inCart ? 'mdi mdi-cart ': 'mdi mdi-cart-outline'"
-            class="btn-cart"
-          >
-          </icon-btn>
+          <buy-button
+            iconBtn
+            :item="item"/>
         </div>
       </div>
       <div class="product__short-description">
@@ -79,10 +84,6 @@ export default {
         return this.formatPrice(this.item.old_price)
       }
     },
-    inCart() {
-      let cart = this.$store.getters.getCart
-      return cart.find(itemCart => itemCart.id == this.item.id)
-    },
     inComparison() {
       let comparison = this.$store.getters.getComparison
       return comparison.find(itemComparison => {
@@ -91,16 +92,6 @@ export default {
     }
   },
   methods: {
-    addCart() {
-      if (!this.inCart) {
-        this.$store.commit('addCart', this.item)
-        this.$root.$emit('showNotification', 'cart-notification')
-        
-      } else {
-        this.$root.$emit('showOverlay', 'cart')
-        
-      }
-    },
     addComparison() {
       this.$store.commit('addComparison', this.item)
       this.$root.$emit('showNotification', 'comparison-notification')
@@ -194,12 +185,16 @@ export default {
     }
     
     .product__title{
-      font-size: 14px;
       height: 35px;
-      margin-bottom: 10px;
+      margin-bottom: 16px;
       overflow: hidden;
       cursor: pointer;
 
+      .product__title-link{
+        font-size: 14px;
+        color: black;
+        text-decoration: none;
+      }
     }
     
     .product__price{

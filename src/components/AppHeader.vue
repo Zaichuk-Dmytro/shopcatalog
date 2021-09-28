@@ -4,7 +4,7 @@
       <icon-btn
         class="mdi-icon"
         icon="mdi-menu"
-        @click="showOverlay"
+        @click="showOverlay('app-left-menu')"
       ></icon-btn>
       <router-link class="logo" to="/">LOGO</router-link>
       <button class="header__btn-catalog">
@@ -71,14 +71,10 @@ export default {
   },
   computed: {
     lengthItemsInCart() {
-      return this.$store.getters.getCart.length
+      return this.$store.getters.lengthCart
     },
     lengthItemsInComparison() {
-      let comparison = this.$store.getters.getComparison
-      
-      return comparison.reduce((value, elem) => {
-        return value += elem.items.length
-      }, 0)
+      return this.$store.getters.lengthComparison
     },
   }
 }
@@ -103,6 +99,10 @@ export default {
       .logo{
         width: 160px;
         margin-left: 20px;
+
+        &:visited {
+          color: #fff;
+        }
       }
 
       .header__btn-catalog{

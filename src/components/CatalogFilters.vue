@@ -1,6 +1,8 @@
 <template>
   <div class="catalog-filters">
-    filters
+    <message-wrapper
+      text="Раздел в разработке"
+    />
   </div>
 </template>
 
@@ -12,8 +14,9 @@ export default {
 
 <style lang="scss" scoped>
   .catalog-filters{
-    background-color: grey;
     min-width: 250px;
     border-right: 1px solid #dadada;
+    color: #3e77aa;
+    font-size: 30px;
   }
 </style>

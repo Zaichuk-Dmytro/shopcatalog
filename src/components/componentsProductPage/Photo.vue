@@ -1,5 +1,5 @@
 <template>
-  <content-wrapper 
+  <product-short-information 
     :infoProduct="product"
   >
     <div class="photo-content">
@@ -19,7 +19,7 @@
         </li>
       </ul>
     </div>
-   </content-wrapper>  
+   </product-short-information>  
 </template>
 
 <script>

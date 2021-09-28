@@ -1,11 +1,11 @@
 <template>
-  <content-wrapper 
+  <product-short-information 
     :infoProduct="product"
   >
-    <div class="test">
-      Характеристики
-    </div>
-  </content-wrapper>
+    <message-wrapper
+      text="Раздел в разработке"
+    />   
+  </product-short-information>
 </template>
 
 <script>
@@ -18,9 +18,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.cha{
-  width: 200px;
-  height: 200px;
-  background-color: orange;
-}
 </style>

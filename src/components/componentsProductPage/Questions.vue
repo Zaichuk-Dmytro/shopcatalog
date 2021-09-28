@@ -1,13 +1,11 @@
 <template>
-  <content-wrapper 
+  <product-short-information 
     :infoProduct="product"
   >
-    <div class="wrapper"> 
-      <div class="reviews">
-        Раздел в разработке
-      </div>  
-   </div>
-  </content-wrapper>
+    <message-wrapper
+      text="Раздел в разработке"
+    />
+  </product-short-information>
 </template>
 
 <script>
@@ -20,14 +18,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.wrapper{
-  width: 100%;
-  
-  .reviews{
-    display: flex;
-    justify-content: center;
-    font-size: 40px;
-    color: #3e77aa;
-  }
-}
+
 </style>

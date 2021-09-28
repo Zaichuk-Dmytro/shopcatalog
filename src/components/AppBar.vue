@@ -44,7 +44,6 @@ export default {
 <style lang="scss" scoped>
   .app-bar{
     width: 250px;
-    height: 300px;
     border-right: 1px solid #e9e9e9;
     padding: 10px;
     

@@ -1,7 +1,7 @@
 <template>
   <div class="catalog-page">
-    <div class="name-category">{{nameCategory}}
-
+    <div class="name-category">
+      {{nameCategory}}
     </div>
     <div class="wrapper-catalog">
       <catalog-filters></catalog-filters>
@@ -18,13 +18,7 @@
 </template>
 
 <script>
-import { modalMixin } from '../components/mixins'
-
-
 export default {
-  mixins: [
-    modalMixin
-  ],
   data: () => ({
     items: [],
   }),
@@ -47,7 +41,7 @@ export default {
    
   },
   async created() {
-    this.items = await this.fetchApi(this.type)
+    this.items = await this.$store.dispatch('fetchApi', this.type)
   }
 
 }
@@ -68,8 +62,9 @@ export default {
     .name-category{
       font-size: 24px;
       width: 100%;
-      height: 50px;
       position: static;
+      padding: 20px 0;
+      font-size: 36px;
       
     }
     .catalog{

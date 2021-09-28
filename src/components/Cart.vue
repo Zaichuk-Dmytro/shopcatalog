@@ -86,14 +86,7 @@ export default {
       padding-top: 0;
       height: calc(100% - 100px); ;
       overflow: auto;
-      scrollbar-width: thin;
-      scrollbar-color: rgba($color: #000000, $alpha: 0.5) transparent;
-      &::-webkit-scrollbar {width: 8px;}
-      &::-webkit-scrollbar-track-piece { background: white;}
-      &::-webkit-scrollbar-thumb {
-        background-color: rgba($color: #000000, $alpha: 0.3);
-        border-radius: 4px;
-      }
+      
     }
     
     .cart__footer{
